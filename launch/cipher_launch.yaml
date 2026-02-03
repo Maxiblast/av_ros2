@@ -1,0 +1,14 @@
+launch:
+- node:
+    pkg: "av_ros2"
+    exec: "main"
+    name: "minimal_publisher"
+    output: "screen"
+    param:
+    - from: "$(find-pkg-share av_ros2)/params.yaml"
+
+- node:
+    pkg: "av_ros2"
+    exec: "participant"
+    name: "minimal_subscriber"
+    output: "screen"
